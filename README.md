@@ -1,2 +1,2 @@
-# GFG-DSA-
+# LeetCode-DSA-
 DSA (prectice)
