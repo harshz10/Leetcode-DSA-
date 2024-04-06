@@ -1,0 +1,44 @@
+//C++
+class Solution {
+public:
+    bool isPalindrome(ListNode* head) {
+        int count = 0;
+        ListNode *temp = head;
+        while (temp) {
+            count++;
+            temp = temp->next;
+        }
+
+        // Handle edge case where the list is empty or has only one node
+        if (count <= 1)
+            return true;
+
+        int mid = count / 2;
+        
+        // Find the middle node
+        ListNode *slow = head, *fast = head;
+        while (mid--) {
+            fast = fast->next;
+        }
+
+        // Reverse the second half of the list
+        ListNode *prev = nullptr, *next = nullptr;
+        while (fast) {
+            next = fast->next;
+            fast->next = prev;
+            prev = fast;
+            fast = next;
+        }
+
+        // Compare the first and second halves
+        ListNode *first = head, *second = prev;
+        while (first && second) {
+            if (first->val != second->val)
+                return false;
+            first = first->next;
+            second = second->next;
+        }
+
+        return true;
+    }
+};
