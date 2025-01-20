@@ -1,7 +1,7 @@
-//c++. soluTION
+//c++. soluTIONl
 class Solution {
 public:
-    ListNode* removeNthFromEnd(ListNode* head, int n) {
+    ListNode* removeNthFromEnd(ListNode* head, int n) {;
         
         int count = 0;
         ListNode *temp = head;
