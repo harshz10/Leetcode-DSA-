@@ -1,4 +1,4 @@
-//c++. soluTIONl2
+//c++. soluTION..
 class Solution {
 public:
     ListNode* removeNthFromEnd(ListNode* head, int n) {;
