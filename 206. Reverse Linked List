@@ -1,4 +1,4 @@
-/C++ solution
+/C++ solutions
 class Solution {
 public:
     ListNode * Reverse(ListNode *curr, ListNode *prev)
